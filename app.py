@@ -10,8 +10,8 @@ app.config["DEBUG"] = True
 MODEL_PATH = 'best.pt'
 
 # load model, first parameter is the path to the model folder
-model = torch.hub.load('yolov5', 'custom',
-                       path=MODEL_PATH, source='local', force_reload=True)
+model = torch.hub.load('ultralytics/yolov5', 'yolov5m',
+                       force_reload=True)
 # model confedance
 model.conf = 0.6
 
