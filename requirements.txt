@@ -80,7 +80,6 @@ scipy==1.8.0
 seaborn==0.11.2
 Send2Trash==1.8.0
 shellescape==3.8.1
-six==1.16.0
 torch==1.10.2+cpu
 torchvision==0.11.3+cpu
 tornado==6.1
