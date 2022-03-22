@@ -40,7 +40,7 @@ def home():
         detection = model(["./Data/" + filename], size=1280)
 
         # display results
-        # detection.save()
+        detection.save()
 
         # convert the data into json format
         preds_json_lst = json.loads(
@@ -74,4 +74,4 @@ def home():
         })
 
 
-app.run()
+# app.run()
