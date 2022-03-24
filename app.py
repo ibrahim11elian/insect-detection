@@ -15,9 +15,11 @@ model = torch.hub.load('ultralytics/yolov5', 'yolov5s',
 # model confedance
 model.conf = 0.6
 
-@app.rout('/', methods=['GET'])
+
+@app.route('/', methods=['GET'])
 def a():
     return "insect detection"
+
 
 @app.route('/detect', methods=['POST'])
 def home():
