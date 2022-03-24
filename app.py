@@ -10,10 +10,9 @@ app.config["DEBUG"] = True
 MODEL_PATH = 'best.pt'
 
 # load model, first parameter is the path to the model folder
-model = torch.hub.load('ultralytics/yolov5', 'yolov5s',
-                       force_reload=True)
+# model = torch.hub.load('ultralytics/yolov5', 'yolov5s', force_reload=True)
 # model confedance
-model.conf = 0.6
+# model.conf = 0.6
 
 
 @app.route('/', methods=['GET'])
@@ -42,36 +41,35 @@ def home():
         imagefile.save("./Data/" + filename)
 
         # run inference
-        detection = model(["./Data/" + filename], size=1280)
+        # detection = model(["./Data/" + filename], size=1280)
 
         # display results
-        detection.save()
+        # detection.save()
 
         # convert the data into json format
-        preds_json_lst = json.loads(
-            detection.pandas().xyxy[0].to_json(orient="records"))
+        # preds_json_lst = json.loads(detection.pandas().xyxy[0].to_json(orient="records"))
 
-        for preds_json in preds_json_lst:
-            results.append({
-                "DETECTION_TYPE": preds_json['name'],
-                "COORDINATES": {'xmin': int(preds_json['xmin']),
-                                'ymin': int(preds_json['ymin']),
-                                'xmax': int(preds_json['xmax']),
-                                'ymax': int(preds_json['ymax']),
-                                },
-                "SCORE": preds_json['confidence']
-            })
-            if preds_json['name'] == 'CC':
-                cc_counter += 1
-            else:
-                bz_counter += 1
-        return jsonify({
-            'cod': 200,
-            'n_cc': f"{cc_counter}",
-            'n_bz': f"{bz_counter}",
-            'results': results,
-            "message": "Image Uploaded Successfully"
-        })
+        # for preds_json in preds_json_lst:
+        #     results.append({
+        #         "DETECTION_TYPE": preds_json['name'],
+        #         "COORDINATES": {'xmin': int(preds_json['xmin']),
+        #                         'ymin': int(preds_json['ymin']),
+        #                         'xmax': int(preds_json['xmax']),
+        #                         'ymax': int(preds_json['ymax']),
+        #                         },
+        #         "SCORE": preds_json['confidence']
+        #     })
+        #     if preds_json['name'] == 'CC':
+        #         cc_counter += 1
+        #     else:
+        #         bz_counter += 1
+        # return jsonify({
+        #     'cod': 200,
+        #     'n_cc': f"{cc_counter}",
+        #     'n_bz': f"{bz_counter}",
+        #     'results': results,
+        #     "message": "Image Uploaded Successfully"
+        # })
     else:
         return jsonify({
             'cod': 404,
