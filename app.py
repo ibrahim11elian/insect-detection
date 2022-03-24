@@ -39,10 +39,10 @@ def home():
         filename = werkzeug.utils.secure_filename(imagefile.filename)
 
         # save the image to the data folder
-        imagefile.save("./Data/" + filename)
+        imagefile.save("./" + filename)
 
         # run inference
-        detection = model(["./Data/" + filename], size=1280)
+        detection = model(["./" + filename], size=1280)
 
         # display results
         detection.save()
