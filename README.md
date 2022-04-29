@@ -269,6 +269,6 @@
     }
 
 -you also can clone this rebo and do the following to git your local system ready:  
- -after cloning the rebo go to the folder and install all the requirements by running this code on your cmd `pip install -r requirements.txt`
--now download the model from this [link](https://drive.google.com/file/d/1Nzx8kAejq2rz6yv2YAyOXlp4iFcX8Mf6/view?usp=sharing) to the main foldder.
+ -after cloning the rebo go to the folder and install all the requirements by running this code on your cmd `pip install -r requirements.txt`  
+-now download the model from this [link](https://drive.google.com/file/d/1Nzx8kAejq2rz6yv2YAyOXlp4iFcX8Mf6/view?usp=sharing) to the main foldder.  
 -run app.py and use your localhost link with detect route for post requests.
