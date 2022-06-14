@@ -4,7 +4,7 @@
 
 -The detection is done by volov5 with accuracy 95%.
 
--you can use our version by sending a post request with the photo you want to know the count of each type of insects to this link (http://insect-detectoin-api.azurewebsites.net/detect).
+-you can use our version by sending a post request with the photo you want to know the count of each type of insects to this link (http://insect-detection-api.azurewebsites.net/detect).
 
     -Example of returned data
 
@@ -68,7 +68,8 @@
 
     }
 
-# you also can clone this rebo and do the following to get your local system ready:  
+# you also can clone this rebo and do the following to get your local system ready:
+
 -after cloning the rebo go to the folder and install all the requirements by running this code on your cmd `pip install -r requirements.txt`  
 -now download the model from this [link](https://drive.google.com/file/d/1mtpDq-_TFdypufCNwQtvprMfqbZeBs46/view?usp=sharing) to the main folder.  
 -run app.py and use your localhost link with detect route for post requests.
