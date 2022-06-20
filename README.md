@@ -2,7 +2,7 @@
 
 -this is an api used for detect and count the number of to types of insects namely the Mediterranean fruit fly and the peach fruit fly,(Ceratitis Capitata, Bactrocera Zonata)
 
--The detection is done by volov5 with accuracy 95%.
+-The detection is done by volov5 with accuracy 84%.
 
 -you can use our version by sending a post request with the photo you want to know the count of each type of insects to this link (http://insect-detection-api.azurewebsites.net/detect).
 
